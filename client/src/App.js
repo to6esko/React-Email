@@ -44,7 +44,7 @@ class App extends Component {
           <Label for="name">Email</Label>
           <Input
             type="text"
-            name="name"
+            name="email"
             onChange={this.handleChange} />
         </FormGroup>
 
@@ -52,7 +52,7 @@ class App extends Component {
           <Label for="name">Message</Label>
           <Input
             type="text"
-            name="name"
+            name="message"
             onChange={this.handleChange} />
         </FormGroup>
 
