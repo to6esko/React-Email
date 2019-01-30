@@ -21,7 +21,6 @@ class App extends Component {
 
  async handleSubmit(e) {
     e.preventDefault();
-
     const { name, email, message } = this.state;
     const form = await axios.post('/api/form',{
       name,
@@ -30,7 +29,7 @@ class App extends Component {
     });
   };
 
-  
+
   render() {
     return (
       <Form onSubmit={this.handleSubmit} style={{ width: '600px', marginLeft: '50px', marginTop: '50px' }}>
@@ -66,3 +65,7 @@ class App extends Component {
   }
 }
 export default App;
+
+
+
+//"start":"npm start",
