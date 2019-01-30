@@ -21,15 +21,17 @@ app.post('/api/form', (req, res) => {
         let transporter = nodemailer.createTransport({
             host: 'smtp.ethereal.email',
             port: 587,
-            secure: false,
             auth: {
-                user: 'feqkkbz6saacdruo@ethereal.email',
-                pass: 'Umhd5CR7CTyZ4hXmwb'
+                user: 'atzklpwuenjrj3d3@ethereal.email',
+                pass: 'sBxRgvddsePrK4mPgG'
+            },
+            tls: {
+                rejectUnauthorized: false
             }
         });
         let mailOptions = {
             from: 'test@testaccont.com',
-            to: 'feqkkbz6saacdruo@ethereal.email',
+            to: 'atzklpwuenjrj3d3@ethereal.email',
             replyTo: 'test@testaccont.com',
             text: req.body.message,
             html: htmlEmail
