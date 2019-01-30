@@ -21,6 +21,7 @@ app.post('/api/form', (req, res) => {
         let transporter = nodemailer.createTransport({
             host: 'smtp.ethereal.email',
             port: 587,
+            secure: false,
             auth: {
                 user: 'feqkkbz6saacdruo@ethereal.email',
                 pass: 'Umhd5CR7CTyZ4hXmwb'

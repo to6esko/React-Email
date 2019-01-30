@@ -6,7 +6,7 @@ import axios from 'axios';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
+    this.state = {  
       name: '',
       email: '',
       message: ''
@@ -17,17 +17,20 @@ class App extends Component {
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
+
  async handleSubmit(e) {
     e.preventDefault();
 
     const { name, email, message } = this.state;
-    const from = await axios.post('/api/form',{
+    const form = await axios.post('/api/form',{
       name,
       email,
       message
-    })
-  }
+    });
+  };
+
+  
   render() {
     return (
       <Form onSubmit={this.handleSubmit} style={{ width: '600px', marginLeft: '50px', marginTop: '50px' }}>
@@ -41,17 +44,17 @@ class App extends Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="name">Email</Label>
+          <Label for="email">Email</Label>
           <Input
-            type="text"
+            type="email"
             name="email"
             onChange={this.handleChange} />
         </FormGroup>
 
         <FormGroup>
-          <Label for="name">Message</Label>
+          <Label for="message">Message</Label>
           <Input
-            type="text"
+            type="textarea"
             name="message"
             onChange={this.handleChange} />
         </FormGroup>
